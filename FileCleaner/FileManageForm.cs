@@ -40,6 +40,7 @@ namespace FileCleaner
             label2.Text = "【提示】正在扫描,请稍后...";
             label2.ForeColor = Color.Blue;
             _disk = currentUrl;//当前url
+            linkLabel2.Enabled = false;
             List<ShowFileBLL.EasyFileDtoList> list = new List<ShowFileBLL.EasyFileDtoList>();
             await this.TaskRunWithUIAsync(() =>
             {
@@ -55,6 +56,7 @@ namespace FileCleaner
                     label2.ForeColor = Color.Red;
                     dataGridView1.Rows.Clear();
                     button1.Enabled = true;
+                    linkLabel2.Enabled = true;
                     return;
                 }
                 dataGridView1.SetCommonWithCell(new DataGridViewExtentions.DataDisplayEntityCell<EasyFileDtoList>
@@ -91,6 +93,7 @@ namespace FileCleaner
                 label2.Text = $"【扫描结束】{currentUrl}";
                 label2.ForeColor = Color.Blue;
                 button1.Enabled = true;
+                linkLabel2.Enabled = true;
             });
         }
 
@@ -111,6 +114,7 @@ namespace FileCleaner
                     form.Icon = this.Icon;
                     form.StartPosition = this.StartPosition;
                     form.FormBorderStyle = this.FormBorderStyle;
+                    form.MaximizeBox = false;
                     form.Show();
                 }
             }
@@ -163,10 +167,12 @@ namespace FileCleaner
 
         private async void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            linkLabel2.Enabled = false;
             var btn1Status = button1.Enabled;
             await Scan(_disk);
             linkLabel2.LinkVisited = true;
             button1.Enabled = btn1Status;
+            linkLabel2.Enabled = true;
         }
     }
 }
