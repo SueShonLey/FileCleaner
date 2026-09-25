@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCleaner", "FileCleaner\FileCleaner.csproj", "{227A4AD4-8044-44B0-8854-45A92E4774EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{227A4AD4-8044-44B0-8854-45A92E4774EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{227A4AD4-8044-44B0-8854-45A92E4774EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{227A4AD4-8044-44B0-8854-45A92E4774EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{227A4AD4-8044-44B0-8854-45A92E4774EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34E7D865-B842-4E6D-A77F-1F1818E8D719}
+	EndGlobalSection
+EndGlobal
