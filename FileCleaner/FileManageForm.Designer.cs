@@ -30,13 +30,13 @@
         {
             label2 = new Label();
             groupBox1 = new GroupBox();
+            linkLabel2 = new LinkLabel();
             linkLabel1 = new LinkLabel();
             label3 = new Label();
             groupBox2 = new GroupBox();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            linkLabel2 = new LinkLabel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -67,6 +67,17 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "说明";
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.Location = new Point(477, 65);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(67, 15);
+            linkLabel2.TabIndex = 4;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "刷新当前";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel1
             // 
@@ -134,17 +145,6 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(477, 65);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(67, 15);
-            linkLabel2.TabIndex = 4;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "刷新当前";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
-            // 
             // FileManageForm
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
@@ -155,7 +155,7 @@
             Font = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FileManageForm";
-            Text = "FileManageForm";
+            Text = "文件管理";
             Load += FileManageForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

@@ -97,7 +97,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
-            Text = "文件清理者";
+            Text = "文件清理器";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
